@@ -69,7 +69,7 @@ const Title = styled.h2`
   align-items: center;
   font-size: calc(1em + 1vw);
   text-align: center;
-
+  white-space: nowrap;
   ${Main}:hover & {
     & > * {
       fill: ${props => props.theme.body};
