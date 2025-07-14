@@ -38,7 +38,7 @@ const SubBox1 = styled.div`
 width: 50%;
 position: relative;
 display: flex;
- @media (max-width: 820px) {
+ @media (max-width: 1000px) {
      display: none;
 }
 .pic{
@@ -59,7 +59,7 @@ position: relative;
 display: flex;
 
  
-     @media (max-width: 820px) {
+     @media (max-width: 1000px) {
     width: 100%;
     background-color: ${props => props.theme.text};
 }
