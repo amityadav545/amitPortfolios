@@ -34,11 +34,13 @@ background-size: 100% 2px;
     z-index:1;
 
 `
-const SubBox = styled.div`
+const SubBox1 = styled.div`
 width: 50%;
 position: relative;
 display: flex;
-
+ @media (max-width: 820px) {
+     display: none;
+}
 .pic{
     position: absolute;
     bottom: 0;
@@ -46,6 +48,20 @@ display: flex;
     transform: translate(-50%,0%);
     width: 100%;
     height: auto;
+     
+    
+}
+`
+
+const SubBox = styled.div`
+width: 50%;
+position: relative;
+display: flex;
+
+ 
+     @media (max-width: 820px) {
+    width: 100%;
+    background-color: ${props => props.theme.text};
 }
 `
 
@@ -58,7 +74,7 @@ cursor: pointer;
 display: flex;
 flex-direction: column;
 justify-content: space-evenly;
-
+ 
 &>*:last-child{
     color: ${props => `rgba(${props.theme.bodyRgba},0.6)` };
     font-size: calc(0.5rem + 1.5vw);
@@ -84,7 +100,7 @@ const Intro = () => {
                     <h6>I build clean, scalable, and modern web applications using the MERN stack.</h6>
                 </Text>
             </SubBox>
-            <SubBox>
+            <SubBox1>
                 <motion.div
                 initial={{opacity:0}}
         animate={{opacity: 1}}
@@ -92,7 +108,7 @@ const Intro = () => {
                 >
                     <img className="pic" src={Me} alt="Profile Pic" />
                 </motion.div>
-            </SubBox>
+            </SubBox1>
         </Box>
     )
 }
